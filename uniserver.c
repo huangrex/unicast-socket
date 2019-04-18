@@ -67,16 +67,16 @@ int main(int argc, char*argv[]){
         int count  = 0;
         printf("%lld\n", sz);
         while(1){
-            //usleep(10);
+            
             bzero(sendbuff, sizeof(sendbuff));
-            //memset(sendbuff, 0, BUFFSIZE);
+            
             check = fread(sendbuff, 1, BUFFSIZE, in);
-            printf("%d\n", check);
-            //printf("%d\n", check);
+            
+            
             if(check == 0)break;
             
             write(newsockfd, sendbuff, check);
-            //read(sockfd, recbuff, BUFFSIZE);
+            
         }
         printf("mission complete\n");
         close(newsockfd);
