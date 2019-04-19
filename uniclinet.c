@@ -70,10 +70,10 @@ int main(int argc, char *argv[]){
             count += check;
             printf("%d\n", count);
             fwrite(recbuff, sizeof(char), check, out);
-            //write(sockfd, (char*)&recbuff, sizeof(recbuff));
+            
         }
         
-        //if(count >= sz)break;
+       
     }
     
     printf("mission completed\n");
